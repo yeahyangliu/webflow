@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/webflow
+ http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+    <!-- view-state中的view对应jsp文件夹中的jsp页面，on是触发事件，to对应state id -->
+    <view-state id="first" view="first">
+        <transition on="submit" to="second">
+        </transition>
+    </view-state>
+    <view-state id="second" view="second">
+        <transition on="confirm" to="third">
+        </transition>
+    </view-state>
+    <view-state id="third" view="third">
+        <transition on="returnToIndex" to="returnToIndex">
+        </transition>
+    </view-state>
+    <end-state id="returnToIndex" view="end">
+    </end-state>
+</flow>
