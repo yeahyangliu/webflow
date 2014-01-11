@@ -14,14 +14,14 @@
         </property>
     </bean>
 
-    <!--<bean-->
-            <!--id="viewMappings"-->
-            <!--class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">-->
-         <!--&lt;!&ndash;/shopping.do 请求由 flowController 来处理 &ndash;&gt;-->
-        <!--<property name="mappings">-->
-            <!--<value> /myFlow=flowController </value>-->
-        <!--</property>-->
-    <!--</bean>-->
+    <bean
+            id="viewMappings"
+            class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+         <!--/shopping.do 请求由 flowController 来处理 -->
+        <property name="mappings">
+            <value> /myFlow=flowController </value>
+        </property>
+    </bean>
 
     <bean
             id="flowController"
