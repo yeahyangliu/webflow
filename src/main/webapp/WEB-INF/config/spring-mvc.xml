@@ -14,22 +14,19 @@
         </property>
     </bean>
 
-    <bean
-            id="viewMappings"
-            class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-         <!--/shopping.do 请求由 flowController 来处理 -->
-        <property name="mappings">
-            <value> /myFlow=flowController </value>
-        </property>
-        <property name="defaultHandler">
-            <!-- UrlFilenameViewController 会将 "/index" 这样的请求映射成名为 "index" 的视图 -->
-            <bean class="org.springframework.web.servlet.mvc.UrlFilenameViewController" />
-        </property>
-    </bean>
+    <!--<bean-->
+            <!--id="viewMappings"-->
+            <!--class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">-->
+         <!--&lt;!&ndash;/shopping.do 请求由 flowController 来处理 &ndash;&gt;-->
+        <!--<property name="mappings">-->
+            <!--<value> /myFlow=flowController </value>-->
+        <!--</property>-->
+    <!--</bean>-->
 
     <bean
             id="flowController"
             class="org.springframework.webflow.mvc.servlet.FlowController">
         <property name="flowExecutor" ref="flowExecutor"/>
     </bean>
+
 </beans>
